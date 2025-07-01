@@ -30,6 +30,7 @@ header h1{
 
 nav{
     width: 100%;
+    height: 55px;
     background: linear-gradient(#00000009,#00000027);
     backdrop-filter: blur(7px);
     display: flex;
@@ -39,7 +40,14 @@ nav{
     bottom: 0;
 }
 
-nav a{
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
     color: grey;
     height: 40px;
     font-size: 0.9rem;
@@ -52,7 +60,8 @@ nav a{
     cursor: pointer;  
 }
 
-main #homecontainer{
+/* Discover Section  */
+#discover #homecontainer{
     width: 100%;
     height: 140px;
 
@@ -61,10 +70,79 @@ main #homecontainer{
     align-items: center;
 }
 
-main #homecontainer div{
+#discover #homecontainer div{
     width: 120px;
     height: 120px;
     background-color: skyblue;
+    border-radius: 10px;
+}
+
+/* Room Section  */
+#room{
+    display: none;
+}
+#room #search{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#room #search div{
+    /* background-color: red; */
+    font-size: 0.6rem;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+#room #search div span{
+    margin-right: 6px;
+}
+
+#room article{
+    width: 100%;
+    height: 250px;
+    font-size: 0.8rem;
+    /* background-color: green; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#room article .rooms{
+    width: 90%;
+    height: 100%;
+    box-shadow: 0px 0px 5px 5px #00000009;
+    /* background-color: red; */
+}
+
+#room article .rooms .roominfo{
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#room article .rooms .roominfo div{
+   width: 45%;
+   height: 95%;
+   /* background-color: red; */
+
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+#room article .rooms .roomcontact{
+    display: flex;
+    justify-content: space-around;
+}
+
+#room article .rooms .roomcontact a{
+    padding: 6px 15px;
+    border: 1px solid #000;
     border-radius: 10px;
 }
 
