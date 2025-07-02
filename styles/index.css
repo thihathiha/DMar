@@ -9,11 +9,12 @@
 body{
     /* height: 100vh; */
     font-family: "Roboto", sans-serif;
+    color: #3E3A3A;
 }
 
 a{
     text-decoration: none;
-    color:#000;
+    color: #3E3A3A;
 }
 
 header{
@@ -48,7 +49,7 @@ nav ul{
 }
 
 nav ul li{
-    color: grey;
+    color: #B2B2B2;
     height: 40px;
     font-size: 0.9rem;
     display: flex;
@@ -81,22 +82,23 @@ nav ul li{
 #room{
     display: none;
 }
-#room #search{
+
+#room #roomsearch{
     width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-#room #search div{
+#room #roomsearch div{
     /* background-color: red; */
     font-size: 0.6rem;
-    border: 1px solid #000;
+    border: 1px solid #3E3A3A;
     padding: 5px 10px;
     border-radius: 6px;
 }
 
-#room #search div span{
+#room #roomsearch div span{
     margin-right: 6px;
 }
 
@@ -142,7 +144,108 @@ nav ul li{
 
 #room article .rooms .roomcontact a{
     padding: 6px 15px;
-    border: 1px solid #000;
+    border: 1px solid #3E3A3A;
     border-radius: 10px;
 }
 
+#food{
+    display: none;
+}
+
+#food #foodsearch{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#food #foodsearch div{
+    font-size: 0.6rem;
+    border: 1px solid #3E3A3A;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+#food article{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#food article .foods{
+    width: 90%;
+    height: 470px;
+    box-shadow: 0px 0px 5px 5px #00000009;
+    margin-top: 20px;
+}
+
+#food article .foods .foodinfo h2{
+    margin: 5px 0 15px 0;
+}
+
+#food article .foods .foodinfo h3{
+    margin-bottom: 6px;
+}
+
+#food article .foods .foodcontact{
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#food article .foods .foodcontact a{
+    padding: 6px 15px;
+    border: 1px solid #3E3A3A;
+    border-radius: 10px;
+}
+
+#about{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about #aboutimg{
+    width: 90%;
+}
+
+#about article{
+    width: 90%;
+}
+
+#about article h4{
+    padding: 3px 0;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #B2B2B2;
+    box-shadow: 4px 4px 4px #3E3A3A25;
+}
+
+#about article p{
+    font-size: 0.8rem;
+    text-align: justify;
+    line-height: 1.1rem;
+}
+
+#about article ul{
+    padding-left: 20px;
+}
+
+#about article ul li{
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+#about article div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}   
+
+#about article div a{
+    font-size: 0.8rem;
+}
