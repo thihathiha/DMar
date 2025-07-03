@@ -1,272 +1,306 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    /* height: 100vh; */
-    font-family: "Roboto", sans-serif;
-    color: #3E3A3A;
-    padding-bottom: 60px;
+body {
+  /* height: 100vh; */
+  font-family: "Roboto", sans-serif;
+  color: #3e3a3a;
+  padding-bottom: 60px;
 }
 
-a{
-    text-decoration: none;
-    color: #3E3A3A;
+a {
+  text-decoration: none;
+  color: #3e3a3a;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-header h1{
-    font-size: 1.2rem;
-    text-align: center;
+header h1 {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-nav{
-    width: 100%;
-    height: 55px;
-    /* background: linear-gradient(#00000009,#00000027); */
-    background-color: #fff;
-    backdrop-filter: blur(7px);
-    display: flex;
-    justify-content: space-around;
+nav {
+  width: 100%;
+  height: 55px;
+  /* background: linear-gradient(#00000009,#00000027); */
+  background-color: #fff;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: space-around;
 
-    position: fixed;
-    bottom: 0;
+  position: fixed;
+  bottom: 0;
 }
 
-nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-nav ul li{
-    color: #B2B2B2;
-    height: 40px;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    font-weight: bold;
+nav ul li {
+  color: #b2b2b2;
+  height: 40px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
 
-    cursor: pointer;  
+  cursor: pointer;
 }
 
 /* Discover Section  */
-#discover #homecontainer{
-    width: 100%;
-    height: 140px;
+#discover #homecontainer {
+  width: 100%;
+  height: 140px;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#discover #homecontainer div{
-    width: 120px;
-    height: 120px;
-    background-color: skyblue;
-    border-radius: 10px;
+#discover #homecontainer div {
+  width: 120px;
+  height: 120px;
+  background-color: skyblue;
+  border-radius: 10px;
 }
 
 /* Room Section  */
-#room{
-    display: none;
+#room {
+  display: none;
 }
 
-#room #roomsearch{
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
+#room #roomsearch {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
-#room #roomsearch .searchbtn{
-    /* background-color: red; */
-    font-size: 0.6rem;
-    border: 1px solid #3E3A3A;
-    padding: 5px 10px;
-    border-radius: 6px;
+#room #roomsearch .searchbtn {
+  /* background-color: red; */
+  font-size: 0.8rem;
+  border: 1px solid #3e3a3a;
+  padding: 8px 10px;
+  border-radius: 6px;
 
-    position: relative;
+  position: relative;
 }
 
-#room #roomsearch .searchbtn span{
-    margin-right: 6px;
+#room #roomsearch .searchbtn span {
+  margin-right: 6px;
 }
 
-#room #roomsearch .searchbtn .searchlist{
-    display: none;
-    width: 100%;
-    background-color: #fff;
-    list-style-type: none;
-    position: absolute;
-    top: 25px;
-    left: 0;
+#room #roomsearch .searchbtn .searchlist {
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
-#room #roomsearch .searchbtn .searchlist li{
-    padding: 5px 8px;
-    text-align: center;
-    border: 1px solid #3E3A3A;
-    /* border-radius: 5px; */
+#room #roomsearch .searchbtn .searchlist li {
+  padding: 7px 0 7px 12px;
+  border: 1px solid #3e3a3a35;
+  /* border-radius: 5px; */
 }
 
-#room article{
-    width: 100%;
-    height: 250px;
-    font-size: 0.8rem;
-    /* background-color: green; */
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+#room article {
+  width: 100%;
+  height: 250px;
+  font-size: 0.8rem;
+  /* background-color: green; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-#room article .rooms{
-    width: 90%;
-    height: 100%;
-    box-shadow: 0px 0px 5px 5px #00000009;
-    /* background-color: red; */
+#room article .rooms {
+  width: 90%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 5px #00000009;
+  /* background-color: red; */
 }
 
-#room article .rooms .roominfo{
-    height: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: red; */
+#room article .rooms .roominfo {
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: red; */
 }
 
-#room article .rooms .roominfo div{
-   width: 45%;
-   height: 95%;
-   /* background-color: red; */
+#room article .rooms .roominfo div {
+  width: 45%;
+  height: 95%;
+  /* background-color: red; */
 
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#room article .rooms .roomcontact{
-    display: flex;
-    justify-content: space-around;
+#room article .rooms .roomcontact {
+  display: flex;
+  justify-content: space-around;
 }
 
-#room article .rooms .roomcontact a{
-    padding: 6px 15px;
-    border: 1px solid #3E3A3A;
-    border-radius: 10px;
+#room article .rooms .roomcontact a {
+  padding: 6px 15px;
+  border: 1px solid #3e3a3a;
+  border-radius: 10px;
 }
 
-#food{
-    display: none;
+#food {
+  display: none;
 }
 
-#food #foodsearch{
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
+#food #foodsearch {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-#food #foodsearch div{
-    font-size: 0.6rem;
-    border: 1px solid #3E3A3A;
-    padding: 5px 10px;
-    border-radius: 6px;
+#food #foodsearch .searchbtn {
+  font-size: 0.8rem;
+  border: 1px solid #3e3a3a;
+  padding: 8px 10px;
+  border-radius: 6px;
+
+  position: relative;
 }
 
-#food article{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#food #foodsearch .searchbtn span {
+  margin-right: 6px;
 }
 
-#food article .foods{
-    width: 90%;
-    height: 470px;
-    box-shadow: 0px 0px 5px 5px #00000009;
-    margin-top: 20px;
+#food #foodsearch .searchbtn .searchlist {
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
-#food article .foods .foodinfo h2{
-    margin: 5px 0 15px 0;
+.searchbtnani {
+  animation: searchani 0.3s ease-in 1;
 }
 
-#food article .foods .foodinfo h3{
-    margin-bottom: 6px;
+#food #foodsearch .searchbtn .searchlist li {
+  padding: 7px 4px 7px 6px;
+  border: 1px solid #3e3a3a35;
+  /* border-radius: 5px; */
 }
 
-#food article .foods .foodcontact{
-    margin-top: 10px;
-
-    display: flex;
-    justify-content: space-around;
+@keyframes searchani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-#food article .foods .foodcontact a{
-    padding: 6px 15px;
-    border: 1px solid #3E3A3A;
-    border-radius: 10px;
+#food article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#about{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+#food article .foods {
+  width: 90%;
+  height: 470px;
+  box-shadow: 0px 0px 5px 5px #00000009;
+  margin-top: 20px;
 }
 
-#about #aboutimg{
-    width: 90%;
+#food article .foods .foodinfo h2 {
+  margin: 5px 0 15px 0;
 }
 
-#about article{
-    width: 90%;
+#food article .foods .foodinfo h3 {
+  margin-bottom: 6px;
 }
 
-#about article h4{
-    padding: 3px 0;
-    margin: 10px 0;
-    text-align: center;
-    background-color: #B2B2B2;
-    box-shadow: 4px 4px 4px #3E3A3A25;
+#food article .foods .foodcontact {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-around;
 }
 
-#about article p{
-    font-size: 0.8rem;
-    text-align: justify;
-    line-height: 1.1rem;
+#food article .foods .foodcontact a {
+  padding: 6px 15px;
+  border: 1px solid #3e3a3a;
+  border-radius: 10px;
 }
 
-#about article ul{
-    padding-left: 20px;
+#about {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#about article ul li{
-    font-size: 0.8rem;
-    margin-bottom: 5px;
+#about #aboutimg {
+  width: 90%;
 }
 
-#about article div{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}   
+#about article {
+  width: 90%;
+}
 
-#about article div a{
-    font-size: 0.8rem;
+#about article h4 {
+  padding: 3px 0;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #b2b2b2;
+  box-shadow: 4px 4px 4px #3e3a3a25;
+}
+
+#about article p {
+  font-size: 0.8rem;
+  text-align: justify;
+  line-height: 1.1rem;
+}
+
+#about article ul {
+  padding-left: 20px;
+}
+
+#about article ul li {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+#about article div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#about article div a {
+  font-size: 0.8rem;
 }

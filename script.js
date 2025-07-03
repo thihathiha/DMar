@@ -56,8 +56,9 @@ function roomtypelist(){
     }else{
         document.querySelector(".roomtypelist").style.display = "none";
     } 
+     document.querySelector(".roomtypelist").classList.add("searchbtnani");
     document.querySelector(".roomdurationlist").style.display = "none";
-    document.querySelector(".roomtenantlist").style.display = "none"
+    document.querySelector(".roomlocationlist").style.display = "none"
 }
 
 document.querySelector(".roomtypebtn").onclick = roomtypelist;
@@ -68,20 +69,46 @@ function roomdurationlist(){
     }else{
         document.querySelector(".roomdurationlist").style.display = "none";
     } 
+    document.querySelector(".roomdurationlist").classList.add("searchbtnani");
     document.querySelector(".roomtypelist").style.display = "none";
-    document.querySelector(".roomtenantlist").style.display = "none"
+    document.querySelector(".roomlocationlist").style.display = "none"
 }
 
 document.querySelector(".roomdurationbtn").onclick = roomdurationlist;
 
-function roomtenantlist(){
-    if(document.querySelector(".roomtenantlist").style.display === "none"){
-    document.querySelector(".roomtenantlist").style.display = "block";
+function roomlocationlist(){
+    if(document.querySelector(".roomlocationlist").style.display === "none"){
+    document.querySelector(".roomlocationlist").style.display = "block";
     }else{
-        document.querySelector(".roomtenantlist").style.display = "none";
+        document.querySelector(".roomlocationlist").style.display = "none";
     } 
+     document.querySelector(".roomlocationlist").classList.add("searchbtnani");
     document.querySelector(".roomtypelist").style.display = "none";
     document.querySelector(".roomdurationlist").style.display = "none"
 }
 
-document.querySelector(".roomtenantbtn").onclick = roomtenantlist;
+document.querySelector(".roomlocationbtn").onclick = roomlocationlist;
+
+function foodtypelist(){
+    if(document.querySelector(".foodtypelist").style.display === "none"){
+    document.querySelector(".foodtypelist").style.display = "block";
+    }else{
+        document.querySelector(".foodtypelist").style.display = "none";
+    } 
+    document.querySelector(".foodtypelist").classList.add("searchbtnani");
+    document.querySelector(".foodlocationlist").style.display = "none"
+}
+
+document.querySelector(".foodtypebtn").onclick = foodtypelist;
+
+function foodlocationlist(){
+    if(document.querySelector(".foodlocationlist").style.display === "none"){
+    document.querySelector(".foodlocationlist").style.display = "block";
+    }else{
+        document.querySelector(".foodlocationlist").style.display = "none";
+    } 
+    document.querySelector(".foodlocationlist").classList.add("searchbtnani");
+    document.querySelector(".foodtypelist").style.display = "none"
+}
+
+document.querySelector(".foodlocationbtn").onclick = foodlocationlist;
