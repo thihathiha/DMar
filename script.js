@@ -49,3 +49,39 @@ function aboutfun(){
 }
 
 document.querySelector("#aboutlink").onclick = aboutfun;
+
+function roomtypelist(){
+    if(document.querySelector(".roomtypelist").style.display === "none"){
+    document.querySelector(".roomtypelist").style.display = "block";
+    }else{
+        document.querySelector(".roomtypelist").style.display = "none";
+    } 
+    document.querySelector(".roomdurationlist").style.display = "none";
+    document.querySelector(".roomtenantlist").style.display = "none"
+}
+
+document.querySelector(".roomtypebtn").onclick = roomtypelist;
+
+function roomdurationlist(){
+    if(document.querySelector(".roomdurationlist").style.display === "none"){
+    document.querySelector(".roomdurationlist").style.display = "block";
+    }else{
+        document.querySelector(".roomdurationlist").style.display = "none";
+    } 
+    document.querySelector(".roomtypelist").style.display = "none";
+    document.querySelector(".roomtenantlist").style.display = "none"
+}
+
+document.querySelector(".roomdurationbtn").onclick = roomdurationlist;
+
+function roomtenantlist(){
+    if(document.querySelector(".roomtenantlist").style.display === "none"){
+    document.querySelector(".roomtenantlist").style.display = "block";
+    }else{
+        document.querySelector(".roomtenantlist").style.display = "none";
+    } 
+    document.querySelector(".roomtypelist").style.display = "none";
+    document.querySelector(".roomdurationlist").style.display = "none"
+}
+
+document.querySelector(".roomtenantbtn").onclick = roomtenantlist;
