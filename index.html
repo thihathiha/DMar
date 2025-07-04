@@ -60,41 +60,41 @@
           <span>Room Type</span>
           <i class="fa-solid fa-caret-down"></i>
           <ul class="searchlist roomtypelist">
-            <li>All</li>
-            <li>Partition/Loft</li>
-            <li>Bed Space</li>
-            <li>Single Room</li>
+            <li class="roomtypeoption" data-filter="">All</li>
+            <li class="roomtypeoption" data-filter="partition">Partition/Loft</li>
+            <li class="roomtypeoption" data-filter="bedspace">Bed Space</li>
+            <li class="roomtypeoption" data-filter="single">Single Room</li>
           </ul>
         </div>
         <div class="searchbtn roomdurationbtn">
           <span>Rental Duration</span>
           <i class="fa-solid fa-caret-down"></i>
           <ul class="searchlist roomdurationlist">
-            <li>All</li>
-            <li>Per Day</li>
-            <li>Per Month</li>
+            <li class="roomdurationoption" data-filter="">All</li>
+            <li class="roomdurationoption" data-filter="day">Per Day</li>
+            <li class="roomdurationoption" data-filter="month">Per Month</li>
           </ul>
         </div>
         <div class="searchbtn roomlocationbtn">
           <span>Location</span>
           <i class="fa-solid fa-caret-down"></i>
            <ul class="searchlist roomlocationlist">
-            <li>All</li>
-            <li>Union</li>
-            <li>Al Rigga</li>
-            <li>Deira</li>
+            <li class="roomlocationoption" data-filter="">All</li>
+            <li class="roomlocationoption" data-filter="union">Union</li>
+            <li class="roomlocationoption" data-filter="rigga">Al Rigga</li>
+            <li class="roomlocationoption" data-filter="deira">Deira</li>
           </ul>
         </div>
       </section>
 
-      <article>
+      <article data-type="partition" data-duration="day" data-location="union">
         <div class="rooms">
           <div class="roominfo">
             <div>
               <img src="../img/Background.png" width="100%" />
             </div>
             <div>
-              <h2>Elite Space</h2>
+              <h2>Partition day union</h2>
               <h3>Union Metro</h3>
               <h3>Single Room</h3>
               <h3>Mixed Nationality</h3>
@@ -107,14 +107,14 @@
         </div>
       </article>
 
-      <article>
+      <article data-type="partition" data-duration="month" data-location="deira">
         <div class="rooms">
           <div class="roominfo">
             <div>
               <img src="../img/Background.png" width="100%" />
             </div>
             <div>
-              <h2>Elite Space</h2>
+              <h2>partition month deira</h2>
               <h3>Union Metro</h3>
               <h3>Single Room</h3>
               <h3>Mixed Nationality</h3>
@@ -126,14 +126,15 @@
           </div>
         </div>
       </article>
-      <article>
+
+      <article data-type="bedspace" data-duration="month" data-location="union">
         <div class="rooms">
           <div class="roominfo">
             <div>
               <img src="../img/Background.png" width="100%" />
             </div>
             <div>
-              <h2>Elite Space</h2>
+              <h2>bedspace month union</h2>
               <h3>Union Metro</h3>
               <h3>Single Room</h3>
               <h3>Mixed Nationality</h3>
@@ -145,14 +146,15 @@
           </div>
         </div>
       </article>
-      <article>
+
+      <article data-type="bedspace" data-duration="month" data-location="rigga">
         <div class="rooms">
           <div class="roominfo">
             <div>
               <img src="../img/Background.png" width="100%" />
             </div>
             <div>
-              <h2>Elite Space</h2>
+              <h2>bedspace month rigga</h2>
               <h3>Union Metro</h3>
               <h3>Single Room</h3>
               <h3>Mixed Nationality</h3>
@@ -164,14 +166,15 @@
           </div>
         </div>
       </article>
-      <article>
+
+      <article data-type="single" data-duration="month" data-location="rigga">
         <div class="rooms">
           <div class="roominfo">
             <div>
               <img src="../img/Background.png" width="100%" />
             </div>
             <div>
-              <h2>Elite Space</h2>
+              <h2>single month rigga</h2>
               <h3>Union Metro</h3>
               <h3>Single Room</h3>
               <h3>Mixed Nationality</h3>
@@ -232,7 +235,7 @@
             <h3><a href="#">Facebook Page</a></h3>
           </div>
           <div class="foodcontact">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Location</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i> Call Now</a>
             <a href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
           </div>
         </div>
@@ -246,7 +249,7 @@
             <h3><a href="#">Facebook Page</a></h3>
           </div>
           <div class="foodcontact">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Location</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i> Call Now</a>
             <a href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
           </div>
         </div>
@@ -260,7 +263,7 @@
             <h3><a href="#">Facebook Page</a></h3>
           </div>
           <div class="foodcontact">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Location</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i> Call Now</a>
             <a href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
           </div>
         </div>
@@ -274,7 +277,7 @@
             <h3><a href="#">Facebook Page</a></h3>
           </div>
           <div class="foodcontact">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Location</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i> Call Now</a>
             <a href="#"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
           </div>
         </div>

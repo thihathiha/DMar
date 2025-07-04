@@ -14,6 +14,8 @@ function discoverfun() {
 
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
+
+  resetRoomFilter();
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
@@ -47,6 +49,8 @@ function foodfun() {
   document.querySelector(".roomtypelist").style.display = "none";
   document.querySelector(".roomdurationlist").style.display = "none";
   document.querySelector(".roomlocationlist").style.display = "none";
+
+  resetRoomFilter();
 }
 
 document.querySelector("#foodlink").onclick = foodfun;
@@ -67,6 +71,8 @@ function aboutfun() {
 
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
+
+  resetRoomFilter();
 }
 
 document.querySelector("#aboutlink").onclick = aboutfun;
@@ -138,3 +144,96 @@ function foodlocationlist() {
 }
 
 document.querySelector(".foodlocationbtn").onclick = foodlocationlist;
+
+// Filter Section
+let roomList = document.getElementById("room").getElementsByTagName("article");
+
+// Filter Room Type
+let roomTypeOptions = document.getElementsByClassName("roomtypeoption");
+
+for (let i = 0; i < roomTypeOptions.length; i++) {
+  roomTypeOptions[i].onclick = function () {
+    let filterValue = this.getAttribute("data-filter");
+    if (filterValue === "") {
+      document.querySelector(".roomtypebtn span").innerText = "Room Type";
+    } else {
+      document.querySelector(".roomtypebtn span").innerText = this.innerText;
+    }
+
+    for (let j = 0; j < roomList.length; j++) {
+      let filterType = roomList[j].getAttribute("data-type");
+
+      if (filterValue === "" || filterValue === filterType) {
+        roomList[j].style.display = "block";
+      } else {
+        roomList[j].style.display = "none";
+      }
+    }
+  };
+}
+
+// Filter Room Duration
+let roomDurationOptions = document.getElementsByClassName("roomdurationoption");
+
+for (let i = 0; i < roomDurationOptions.length; i++) {
+  roomDurationOptions[i].onclick = function () {
+    let filterValue = this.getAttribute("data-filter");
+    if (filterValue === "") {
+      document.querySelector(".roomdurationbtn span").innerText =
+        "Rental Duration";
+    } else {
+      document.querySelector(".roomdurationbtn span").innerText =
+        this.innerText;
+    }
+
+    for (let j = 0; j < roomList.length; j++) {
+      let filterDuration = roomList[j].getAttribute("data-duration");
+
+      if (filterValue === "" || filterValue === filterDuration) {
+        roomList[j].style.display = "block";
+      } else {
+        roomList[j].style.display = "none";
+      }
+    }
+  };
+}
+
+// Filter Room Location
+let roomLocationOptions = document.getElementsByClassName("roomlocationoption");
+
+for (let i = 0; i < roomLocationOptions.length; i++) {
+  roomLocationOptions[i].onclick = function () {
+    let filterValue = this.getAttribute("data-filter");
+    if (filterValue === "") {
+      document.querySelector(".roomlocationbtn span").innerText = "Location";
+    } else {
+      document.querySelector(".roomlocationbtn span").innerText =
+        this.innerText;
+    }
+
+    for (let j = 0; j < roomList.length; j++) {
+      let filterLocation = roomList[j].getAttribute("data-location");
+
+      if (filterValue === "" || filterValue === filterLocation) {
+        roomList[j].style.display = "block";
+      } else {
+        roomList[j].style.display = "none";
+      }
+    }
+  };
+}
+
+// Reset Filter
+function resetRoomFilter() {
+  filterType = "";
+  filterDuration = "";
+  filterLocation = "";
+
+  document.querySelector(".roomtypebtn span").innerText = "Room Type";
+  document.querySelector(".roomdurationbtn span").innerText = "Duration";
+  document.querySelector(".roomlocationbtn span").innerText = "Location";
+
+  for (var j = 0; j < roomList.length; j++) {
+    roomList[j].style.display = "block";
+  }
+}
