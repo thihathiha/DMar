@@ -169,9 +169,20 @@ nav ul li {
 }
 
 #room article .rooms .roomcontact a {
-  padding: 6px 15px;
+  padding: 8px 12px;
   border: 1px solid #3e3a3a;
-  border-radius: 10px;
+  border-radius: 6px;
+}
+
+/* icons */
+.fa-square-whatsapp{
+  color: #25D366;
+}
+.fa-location-dot{
+  color: #960A0A;
+}
+.fa-phone-volume{
+  color: #1d588d;
 }
 
 #food {
@@ -229,6 +240,8 @@ nav ul li {
 
 #food article {
   width: 100%;
+  font-size: 0.8rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,9 +271,9 @@ nav ul li {
 }
 
 #food article .foods .foodcontact a {
-  padding: 6px 15px;
+  padding: 8px 12px;
   border: 1px solid #3e3a3a;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 #about {
