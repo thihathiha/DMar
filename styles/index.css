@@ -115,16 +115,21 @@ nav ul li {
   top: 100%;
   left: 0;
 }
-.searchlist{
+.searchlist {
   display: none;
 }
-.roomtypelist,.roomdurationlist,.roomlocationlist,.foodtypelist,.foodlocationlist{
+.roomtypelist,
+.roomdurationlist,
+.roomlocationlist,
+.foodtypelist,
+.foodlocationlist {
   display: none;
 }
 
 #room #roomsearch .searchbtn .searchlist li {
   padding: 7px 0 7px 12px;
   border: 1px solid #3e3a3a35;
+  border-top: none;
   /* border-radius: 5px; */
 }
 
@@ -175,13 +180,13 @@ nav ul li {
 }
 
 /* icons */
-.fa-square-whatsapp{
-  color: #25D366;
+.fa-square-whatsapp {
+  color: #25d366;
 }
-.fa-location-dot{
-  color: #960A0A;
+.fa-location-dot {
+  color: #960a0a;
 }
-.fa-phone-volume{
+.fa-phone-volume {
   color: #1d588d;
 }
 
@@ -219,14 +224,15 @@ nav ul li {
   left: 0;
 }
 
-.searchbtnani {
-  animation: searchani 0.3s linear 1;
-}
-
 #food #foodsearch .searchbtn .searchlist li {
   padding: 7px 4px 7px 6px;
   border: 1px solid #3e3a3a35;
+  border-top: none;
   /* border-radius: 5px; */
+}
+
+.searchbtnani {
+  animation: searchani 0.2s linear 1;
 }
 
 @keyframes searchani {

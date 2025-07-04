@@ -76,7 +76,7 @@
           </ul>
         </div>
         <div class="searchbtn roomlocationbtn">
-          <span>Location</span>
+          <span>Area</span>
           <i class="fa-solid fa-caret-down"></i>
            <ul class="searchlist roomlocationlist">
             <li class="roomlocationoption" data-filter="">All</li>
@@ -195,28 +195,28 @@
           <span>Food Type</span>
           <i class="fa-solid fa-caret-down"></i>
           <ul class="searchlist foodtypelist">
-            <li>All</li>
-            <li>Curries</li>
-            <li>Monthly Meal</li>
+            <li class="foodtypeoption" data-filter="">All</li>
+            <li class="foodtypeoption" data-filter="curry">Daily Curry</li>
+            <li class="foodtypeoption" data-filter="monthmeal">Monthly Meal</li>
           </ul>
         </div>
         <div class="searchbtn foodlocationbtn">
-          <span>Location</span>
+          <span>Area</span>
           <i class="fa-solid fa-caret-down"></i>
           <ul class="searchlist foodlocationlist">
-            <li>All</li>
-            <li>Union</li>
-            <li>Al Rigga</li>
-            <li>Deira</li>
+            <li class="foodlocationoption" data-filter="">All</li>
+            <li class="foodlocationoption" data-filter="union">Union</li>
+            <li class="foodlocationoption" data-filter="rigga">Al Rigga</li>
+            <li class="foodlocationoption" data-filter="deira">Deira</li>
           </ul>
         </div>
       </section>
 
-      <article>
+      <article data-type="curry" data-location="rigga">
         <div class="foods">
           <div class="foodinfo">
             <img src="img/Background.png" alt="" width="100%" />
-            <h2>Burmese Food</h2>
+            <h2>Curry AlRigga</h2>
             <h3>Al Rigga</h3>
             <h3><a href="#">Facebook Page</a></h3>
           </div>
@@ -226,11 +226,11 @@
           </div>
         </div>
       </article>
-      <article>
+      <article data-type="curry" data-location="rigga">
         <div class="foods">
           <div class="foodinfo">
             <img src="img/Background.png" alt="" width="100%" />
-            <h2>Burmese Food</h2>
+            <h2>Curry AlRigga</h2>
             <h3>Al Rigga</h3>
             <h3><a href="#">Facebook Page</a></h3>
           </div>
@@ -240,11 +240,11 @@
           </div>
         </div>
       </article>
-      <article>
+      <article data-type="monthmeal" data-location="union">
         <div class="foods">
           <div class="foodinfo">
             <img src="img/Background.png" alt="" width="100%" />
-            <h2>Burmese Food</h2>
+            <h2>Monthly Meal Union</h2>
             <h3>Al Rigga</h3>
             <h3><a href="#">Facebook Page</a></h3>
           </div>
@@ -254,11 +254,11 @@
           </div>
         </div>
       </article>
-      <article>
+      <article data-type="monthmeal" data-location="union">
         <div class="foods">
           <div class="foodinfo">
             <img src="img/Background.png" alt="" width="100%" />
-            <h2>Burmese Food</h2>
+            <h2>Monthly Meal Union</h2>
             <h3>Al Rigga</h3>
             <h3><a href="#">Facebook Page</a></h3>
           </div>
@@ -268,11 +268,11 @@
           </div>
         </div>
       </article>
-      <article>
+      <article data-type="monthmeal" data-location="deira">
         <div class="foods">
           <div class="foodinfo">
             <img src="img/Background.png" alt="" width="100%" />
-            <h2>Burmese Food</h2>
+            <h2>Monthly Meal Deira</h2>
             <h3>Al Rigga</h3>
             <h3><a href="#">Facebook Page</a></h3>
           </div>

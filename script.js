@@ -146,29 +146,44 @@ function foodlocationlist() {
 document.querySelector(".foodlocationbtn").onclick = foodlocationlist;
 
 // Filter Section
+
+// Apply Room Filter Function
 let roomList = document.getElementById("room").getElementsByTagName("article");
+
+let filterRoomType = "";
+let filterRoomDuration = "";
+let filterRoomLocation = "";
+
+function roomFilter() {
+  for (let i = 0; i < roomList.length; i++) {
+    let roomType = roomList[i].getAttribute("data-type");
+    let roomDuration = roomList[i].getAttribute("data-duration");
+    let roomLocation = roomList[i].getAttribute("data-location");
+
+    let matchType = filterRoomType === "" || filterRoomType === roomType;
+    let matchDuration =
+      filterRoomDuration === "" || filterRoomDuration === roomDuration;
+    let matchLocation =
+      filterRoomLocation === "" || filterRoomLocation === roomLocation;
+
+    roomList[i].style.display =
+      matchType && matchDuration && matchLocation ? "flex" : "none";
+  }
+}
 
 // Filter Room Type
 let roomTypeOptions = document.getElementsByClassName("roomtypeoption");
 
 for (let i = 0; i < roomTypeOptions.length; i++) {
   roomTypeOptions[i].onclick = function () {
-    let filterValue = this.getAttribute("data-filter");
-    if (filterValue === "") {
+    filterRoomType = this.getAttribute("data-filter");
+    if (filterRoomType === "") {
       document.querySelector(".roomtypebtn span").innerText = "Room Type";
     } else {
       document.querySelector(".roomtypebtn span").innerText = this.innerText;
     }
 
-    for (let j = 0; j < roomList.length; j++) {
-      let filterType = roomList[j].getAttribute("data-type");
-
-      if (filterValue === "" || filterValue === filterType) {
-        roomList[j].style.display = "block";
-      } else {
-        roomList[j].style.display = "none";
-      }
-    }
+    roomFilter();
   };
 }
 
@@ -177,8 +192,8 @@ let roomDurationOptions = document.getElementsByClassName("roomdurationoption");
 
 for (let i = 0; i < roomDurationOptions.length; i++) {
   roomDurationOptions[i].onclick = function () {
-    let filterValue = this.getAttribute("data-filter");
-    if (filterValue === "") {
+    filterRoomDuration = this.getAttribute("data-filter");
+    if (filterRoomDuration === "") {
       document.querySelector(".roomdurationbtn span").innerText =
         "Rental Duration";
     } else {
@@ -186,15 +201,7 @@ for (let i = 0; i < roomDurationOptions.length; i++) {
         this.innerText;
     }
 
-    for (let j = 0; j < roomList.length; j++) {
-      let filterDuration = roomList[j].getAttribute("data-duration");
-
-      if (filterValue === "" || filterValue === filterDuration) {
-        roomList[j].style.display = "block";
-      } else {
-        roomList[j].style.display = "none";
-      }
-    }
+    roomFilter();
   };
 }
 
@@ -203,23 +210,15 @@ let roomLocationOptions = document.getElementsByClassName("roomlocationoption");
 
 for (let i = 0; i < roomLocationOptions.length; i++) {
   roomLocationOptions[i].onclick = function () {
-    let filterValue = this.getAttribute("data-filter");
-    if (filterValue === "") {
+    filterRoomLocation = this.getAttribute("data-filter");
+    if (filterRoomLocation === "") {
       document.querySelector(".roomlocationbtn span").innerText = "Location";
     } else {
       document.querySelector(".roomlocationbtn span").innerText =
         this.innerText;
     }
 
-    for (let j = 0; j < roomList.length; j++) {
-      let filterLocation = roomList[j].getAttribute("data-location");
-
-      if (filterValue === "" || filterValue === filterLocation) {
-        roomList[j].style.display = "block";
-      } else {
-        roomList[j].style.display = "none";
-      }
-    }
+    roomFilter();
   };
 }
 
@@ -234,6 +233,57 @@ function resetRoomFilter() {
   document.querySelector(".roomlocationbtn span").innerText = "Location";
 
   for (var j = 0; j < roomList.length; j++) {
-    roomList[j].style.display = "block";
+    roomList[j].style.display = "flex";
   }
+}
+
+// Apply Food Filter Function
+let filterFoodType = "";
+let filterFoodLocation = "";
+
+let foodList = document.getElementById("food").getElementsByTagName("article");
+
+function foodFilter() {
+  for (let i = 0; i < foodList.length; i++) {
+    let foodType = foodList[i].getAttribute("data-type");
+    let foodLocation = foodList[i].getAttribute("data-location");
+
+    let matchType = filterFoodType === "" || filterFoodType === foodType;
+    let matchLocation = filterFoodLocation === "" || filterFoodLocation === foodLocation;
+
+    foodList[i].style.display =
+      matchType && matchLocation ? "flex" : "none";
+  }
+}
+
+// Filter Food Type
+let foodTypeOptions = document.getElementsByClassName("foodtypeoption");
+
+for (let i = 0; i < foodTypeOptions.length; i++) {
+  foodTypeOptions[i].onclick = function () {
+    filterFoodType = this.getAttribute("data-filter");
+    if (filterFoodType === "") {
+      document.querySelector(".foodtypebtn span").innerText = "Food Type";
+    } else {
+      document.querySelector(".foodtypebtn span").innerText = this.innerText;
+    }
+
+    foodFilter();
+  };
+}
+
+// Filter Food Location
+let foodLocationOptions = document.getElementsByClassName("foodlocationoption");
+
+for (let i = 0; i < foodLocationOptions.length; i++) {
+  foodLocationOptions[i].onclick = function () {
+    filterFoodLocation = this.getAttribute("data-filter");
+    if (filterFoodLocation === "") {
+      document.querySelector(".foodlocationbtn span").innerText = "Area";
+    } else {
+      document.querySelector(".foodlocationbtn span").innerText = this.innerText;
+    }
+
+    foodFilter();
+  };
 }
