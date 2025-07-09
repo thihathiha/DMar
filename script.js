@@ -1,3 +1,82 @@
+// Categories
+function category1fun(){
+  roomfun();
+  document.querySelector(".roomtypebtn span").innerText = "Partition";
+
+  filterRoomType = "partition";
+
+  for(let i = 0; i < roomList.length; i++){
+    if( roomList[i].getAttribute("data-type") === "partition"){
+      roomList[i].style.display = "flex";
+    }else{
+      roomList[i].style.display = "none";
+    }
+  }
+  for(let j = 0; j < roomList.length; j++){
+        roomList[j].classList.add("opacityani");
+      }
+}
+
+function category3fun(){
+  roomfun();
+  document.querySelector(".roomtypebtn span").innerText = "Single Room";
+
+  filterRoomType = "single";
+
+  for(let i = 0; i < roomList.length; i++){
+    if( roomList[i].getAttribute("data-type") === "single"){
+      roomList[i].style.display = "flex";
+    }else{
+      roomList[i].style.display = "none";
+    }
+  }
+  for(let j = 0; j < roomList.length; j++){
+        roomList[j].classList.add("opacityani");
+      }
+}
+
+function category2fun(){
+  foodfun();
+  document.querySelector(".foodtypebtn span").innerText = "Monthly Meal";
+
+  filterFoodType = "monthmeal";
+
+  for(let i = 0; i < foodList.length; i++){
+    if( foodList[i].getAttribute("data-type") === "monthmeal"){
+      foodList[i].style.display = "flex";
+    }else{
+      foodList[i].style.display = "none";
+    }
+  }
+  for(let j = 0; j < foodList.length; j++){
+        foodList[j].classList.add("opacityani");
+      }
+}
+
+function category4fun(){
+  foodfun();
+  document.querySelector(".foodtypebtn span").innerText = "Daily Curry";
+
+  filterFoodType = "curry";
+
+  for(let i = 0; i < foodList.length; i++){
+    if( foodList[i].getAttribute("data-type") === "curry"){
+      foodList[i].style.display = "flex";
+    }else{
+      foodList[i].style.display = "none";
+    }
+  }
+  for(let j = 0; j < foodList.length; j++){
+        foodList[j].classList.add("opacityani");
+      }
+}
+
+document.querySelector(".category1").onclick = category1fun;
+document.querySelector(".category3").onclick = category3fun;
+document.querySelector(".category2").onclick = category2fun;
+document.querySelector(".category4").onclick = category4fun;
+
+// Tabs 
 function discoverfun() {
   document.querySelector("#discover").style.display = "block";
   document.querySelector("#room").style.display = "none";

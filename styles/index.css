@@ -72,40 +72,56 @@ nav ul li {
   width: 100%;
   height: 250px;
   /* background-color: skyblue; */
+}
+
+#discover #homecontainer h2 {
+  margin: 30px 0 15px 10px;
+  font-size: 1.5rem;
+}
+
+#discover #homecontainer .categorybox {
+  width: 100%;
+  height: 50px;
+  /* background-color: skyblue; */
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#discover #homecontainer .categorybox div {
+  width: 150px;
+  height: 100%;
+  /* background-color: #dedede; */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#discover #homecontainer .categorybox div i {
+  width: 35px;
+  height: 35px;
+  background-color: #b2b2b2;
+  border-radius: 50%;
+  color: gold;
+  font-size: 0.9rem;
+  margin: 0 10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#discover #homecontainer .categorycontainer{
-  width: 90%;
-  /* background-color: green; */
+#discover #homecontainer .categorybox div span{
+  font-size: 0.8rem;
 }
-
-#discover #homecontainer h2{
-  margin: 30px 0 15px 0;
-  font-size: 2rem;
-}
-
-#discover #homecontainer .categorybox{
-  width: 100%;
-  height: 60px;
-  /* background-color: skyblue; */
-  margin-bottom: 15px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-#discover #homecontainer .categorybox div{
-  width: 170px;
-  height: 100%;
-  background-color: red;
-  border-radius: 5px;
-}
-
-
 
 /* Room Section  */
 #room {
@@ -207,29 +223,31 @@ nav ul li {
   border-radius: 6px;
 }
 
-.rooms .roominfo div{
+.rooms .roominfo div {
   position: relative;
   /* z-index: -2; */
   /* background-color: red; */
 }
 
-.rooms .roominfo div img{
+.rooms .roominfo div img {
   width: 100%;
 }
 
-.rooms .roominfo div i{
+.rooms .roominfo div i {
   position: absolute;
 }
 
-#prev{
+#prev {
   left: 5px;
 }
 
-#next{
+#next {
   right: 5px;
 }
 
-.img2,.img3,.img4{
+.img2,
+.img3,
+.img4 {
   display: none;
 }
 
@@ -288,7 +306,7 @@ nav ul li {
 .searchbtnani {
   animation: searchani 0.1s linear 1;
 }
-.opacityani{
+.opacityani {
   animation: searchani 0.2s ease-in 1;
 }
 
@@ -319,7 +337,7 @@ nav ul li {
   /* background-color: red; */
 }
 
-#food article .foods .foodinfo div{
+#food article .foods .foodinfo div {
   width: 100%;
   height: 250px;
   /* background-color: blue; */
@@ -327,27 +345,29 @@ nav ul li {
   position: relative;
 }
 
-#food article .foods .foodinfo div i{
+#food article .foods .foodinfo div i {
   font-size: 1.2rem;
   position: absolute;
   top: 50%;
 }
 
-#prevfood{
+#prevfood {
   left: 10px;
 }
 
-#nextfood{
+#nextfood {
   right: 10px;
 }
 
-#food article .foods .foodinfo div img{
+#food article .foods .foodinfo div img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.fimg2,.fimg3,.fimg4{
+.fimg2,
+.fimg3,
+.fimg4 {
   display: none;
 }
 
