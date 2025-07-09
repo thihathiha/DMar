@@ -68,6 +68,11 @@ nav ul li {
 }
 
 /* Discover Section  */
+#discover{
+  /* background-color: red; */
+  height: 840px;
+}
+
 #discover #homecontainer {
   width: 100%;
   height: 250px;
