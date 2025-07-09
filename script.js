@@ -115,6 +115,8 @@ function roomfun() {
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
 
+   document.querySelector("#room").classList.add("opacityani");
+
   resetFoodFilter();
   resetImg();
   resetfoodImg()
@@ -135,6 +137,8 @@ function foodfun() {
   document.querySelector(".roomtypelist").style.display = "none";
   document.querySelector(".roomdurationlist").style.display = "none";
   document.querySelector(".roomlocationlist").style.display = "none";
+
+  document.querySelector("#food").classList.add("opacityani");
 
   resetRoomFilter();
   resetImg();
@@ -159,6 +163,8 @@ function aboutfun() {
 
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
+
+  document.querySelector("#about").classList.add("opacityani");
 
   resetRoomFilter();
   resetFoodFilter();
