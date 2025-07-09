@@ -16,6 +16,9 @@ function discoverfun() {
   document.querySelector(".foodlocationlist").style.display = "none";
 
   resetRoomFilter();
+  resetFoodFilter();
+  resetImg();
+  resetfoodImg()
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
@@ -32,6 +35,10 @@ function roomfun() {
 
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
+
+  resetFoodFilter();
+  resetImg();
+  resetfoodImg()
 }
 
 document.querySelector("#roomlink").onclick = roomfun;
@@ -51,6 +58,8 @@ function foodfun() {
   document.querySelector(".roomlocationlist").style.display = "none";
 
   resetRoomFilter();
+  resetImg();
+  resetfoodImg()
 }
 
 document.querySelector("#foodlink").onclick = foodfun;
@@ -73,6 +82,9 @@ function aboutfun() {
   document.querySelector(".foodlocationlist").style.display = "none";
 
   resetRoomFilter();
+  resetFoodFilter();
+  resetImg();
+  resetfoodImg()
 }
 
 document.querySelector("#aboutlink").onclick = aboutfun;
@@ -169,6 +181,9 @@ function roomFilter() {
     roomList[i].style.display =
       matchType && matchDuration && matchLocation ? "flex" : "none";
   }
+  for(let j = 0; j < roomList.length; j++){
+        roomList[j].classList.add("opacityani");
+      }
 }
 
 // Filter Room Type
@@ -176,6 +191,7 @@ let roomTypeOptions = document.getElementsByClassName("roomtypeoption");
 
 for (let i = 0; i < roomTypeOptions.length; i++) {
   roomTypeOptions[i].onclick = function () {
+    
     filterRoomType = this.getAttribute("data-filter");
     if (filterRoomType === "") {
       document.querySelector(".roomtypebtn span").innerText = "Room Type";
@@ -212,7 +228,7 @@ for (let i = 0; i < roomLocationOptions.length; i++) {
   roomLocationOptions[i].onclick = function () {
     filterRoomLocation = this.getAttribute("data-filter");
     if (filterRoomLocation === "") {
-      document.querySelector(".roomlocationbtn span").innerText = "Location";
+      document.querySelector(".roomlocationbtn span").innerText = "Area";
     } else {
       document.querySelector(".roomlocationbtn span").innerText =
         this.innerText;
@@ -222,11 +238,42 @@ for (let i = 0; i < roomLocationOptions.length; i++) {
   };
 }
 
-// Reset Filter
+// Room Image Carousel 
+let prev = document.getElementById("prev");
+let next = document.getElementById("next");
+let count = 1;
+
+prev.onclick = prevfun;
+next.onclick = nextfun;
+
+
+function nextfun(){
+  document.querySelector(".img"+count).style.display = "none";
+  count++;
+  if(count > 3){count = 1};
+  document.querySelector(".img"+count).style.display = "block";
+}
+
+function prevfun(){
+  document.querySelector(".img"+count).style.display = "none";
+  count--;
+  if(count < 1){count = 3}
+  document.querySelector(".img"+count).style.display = "block";
+}
+
+function resetImg(){
+  for(let i = 1; i <= 3; i++){
+    document.querySelector(".img"+count).style.display = "none";
+  }
+  document.querySelector(".img1").style.display = "block";
+  count = 1;
+}
+
+// Reset Room Filter
 function resetRoomFilter() {
-  filterType = "";
-  filterDuration = "";
-  filterLocation = "";
+  filterRoomType = "";
+  filterRoomDuration = "";
+  filterRoomLocation = "";
 
   document.querySelector(".roomtypebtn span").innerText = "Room Type";
   document.querySelector(".roomdurationbtn span").innerText = "Duration";
@@ -254,6 +301,9 @@ function foodFilter() {
     foodList[i].style.display =
       matchType && matchLocation ? "flex" : "none";
   }
+  for(let j = 0; j < foodList.length; j++){
+        foodList[j].classList.add("opacityani");
+      }
 }
 
 // Filter Food Type
@@ -286,4 +336,49 @@ for (let i = 0; i < foodLocationOptions.length; i++) {
 
     foodFilter();
   };
+}
+
+// Reset Food Filter 
+function resetFoodFilter() {
+  filterFoodType = "";
+  filterFoodLocation = "";
+
+  document.querySelector(".foodtypebtn span").innerText = "Food Type";
+  document.querySelector(".foodlocationbtn span").innerText = "Area";
+
+  for (var j = 0; j < roomList.length; j++) {
+    roomList[j].style.display = "flex";
+  }
+}
+
+// Food Image Carousel 
+
+let prevfood = document.getElementById("prevfood");
+let nextfood = document.getElementById("nextfood");
+let countfood = 1;
+
+prevfood.onclick = prevfoodfun;
+nextfood.onclick = nextfoodfun;
+
+
+function nextfoodfun(){
+  document.querySelector(".fimg"+countfood).style.display = "none";
+  countfood++;
+  if(countfood > 3){countfood = 1};
+  document.querySelector(".fimg"+countfood).style.display = "block";
+}
+
+function prevfoodfun(){
+  document.querySelector(".fimg"+countfood).style.display = "none";
+  countfood--;
+  if(countfood < 1){countfood = 3}
+  document.querySelector(".fimg"+countfood).style.display = "block";
+}
+
+function resetfoodImg(){
+  for(let i = 1; i <= 3; i++){
+    document.querySelector(".fimg"+countfood).style.display = "none";
+  }
+  document.querySelector(".fimg1").style.display = "block";
+  countfood = 1;
 }

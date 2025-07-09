@@ -27,6 +27,8 @@ header {
 
 header h1 {
   font-size: 1rem;
+  letter-spacing: 1px;
+  font-style: italic;
   text-align: center;
 }
 
@@ -41,6 +43,8 @@ nav {
 
   position: fixed;
   bottom: 0;
+
+  z-index: 10;
 }
 
 nav ul {
@@ -66,19 +70,42 @@ nav ul li {
 /* Discover Section  */
 #discover #homecontainer {
   width: 100%;
-  height: 140px;
+  height: 250px;
+  /* background-color: skyblue; */
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
-#discover #homecontainer div {
-  width: 120px;
-  height: 120px;
-  background-color: skyblue;
-  border-radius: 10px;
+#discover #homecontainer .categorycontainer{
+  width: 90%;
+  /* background-color: green; */
 }
+
+#discover #homecontainer h2{
+  margin: 30px 0 15px 0;
+  font-size: 2rem;
+}
+
+#discover #homecontainer .categorybox{
+  width: 100%;
+  height: 60px;
+  /* background-color: skyblue; */
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#discover #homecontainer .categorybox div{
+  width: 170px;
+  height: 100%;
+  background-color: red;
+  border-radius: 5px;
+}
+
+
 
 /* Room Section  */
 #room {
@@ -117,6 +144,7 @@ nav ul li {
 }
 .searchlist {
   display: none;
+  z-index: 10;
 }
 .roomtypelist,
 .roomdurationlist,
@@ -179,6 +207,32 @@ nav ul li {
   border-radius: 6px;
 }
 
+.rooms .roominfo div{
+  position: relative;
+  /* z-index: -2; */
+  /* background-color: red; */
+}
+
+.rooms .roominfo div img{
+  width: 100%;
+}
+
+.rooms .roominfo div i{
+  position: absolute;
+}
+
+#prev{
+  left: 5px;
+}
+
+#next{
+  right: 5px;
+}
+
+.img2,.img3,.img4{
+  display: none;
+}
+
 /* icons */
 .fa-square-whatsapp {
   color: #25d366;
@@ -232,7 +286,10 @@ nav ul li {
 }
 
 .searchbtnani {
-  animation: searchani 0.2s linear 1;
+  animation: searchani 0.1s linear 1;
+}
+.opacityani{
+  animation: searchani 0.2s ease-in 1;
 }
 
 @keyframes searchani {
@@ -256,9 +313,42 @@ nav ul li {
 
 #food article .foods {
   width: 90%;
-  height: 470px;
+  height: 400px;
   box-shadow: 0px 0px 5px 5px #00000009;
   margin-top: 20px;
+  /* background-color: red; */
+}
+
+#food article .foods .foodinfo div{
+  width: 100%;
+  height: 250px;
+  /* background-color: blue; */
+
+  position: relative;
+}
+
+#food article .foods .foodinfo div i{
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+}
+
+#prevfood{
+  left: 10px;
+}
+
+#nextfood{
+  right: 10px;
+}
+
+#food article .foods .foodinfo div img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fimg2,.fimg3,.fimg4{
+  display: none;
 }
 
 #food article .foods .foodinfo h2 {
