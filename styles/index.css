@@ -68,15 +68,12 @@ nav ul li {
 }
 
 /* Discover Section  */
-#discover{
-  /* background-color: red; */
+#discover {
   padding-bottom: 30px;
 }
 
-#discover #homecontainer {
+#discover #homecontainer .categorycontainer {
   width: 100%;
-  /* height: 250px; */
-  /* background-color: skyblue; */
 }
 
 #discover #homecontainer h2 {
@@ -125,16 +122,16 @@ nav ul li {
   align-items: center;
 }
 
-#discover #homecontainer .categorybox div span{
+#discover #homecontainer .categorybox div span {
   font-size: 0.8rem;
 }
 
-#discover #homecontainer .newbox div{
+#discover #homecontainer .newbox div {
   display: flex;
   justify-content: space-evenly;
 }
 
-#discover #homecontainer .newbox div .new{
+#discover #homecontainer .newbox div .new {
   width: 100px;
   height: 150px;
   /* background-color: red; */
@@ -150,31 +147,75 @@ nav ul li {
   justify-content: space-around;
 }
 
-@keyframes slideLeft{
-  from{
-    transform: translateX(100px);
+@keyframes slideLeft {
+  from {
+    transform: translateX(30px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0px);
     opacity: 1;
   }
 }
 
-#discover #homecontainer .newbox div .new img{
+#discover #homecontainer .newbox div .new img {
   width: 100%;
   height: 80%;
   object-fit: cover;
 }
 
-#discover #homecontainer .newbox div .new ul{
+#discover #homecontainer .newbox div .new ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
 }
 
-#discover #homecontainer .newbox div .new ul li{
+#discover #homecontainer .newbox div .new ul li {
   font-size: 0.6rem;
+}
+
+#discover #homecontainer .featured {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#discover #homecontainer .featured .featured1,
+.featured2 {
+  width: 40%;
+  /* height: 800px; */
+  /* background-color: red; */
+}
+
+#discover #homecontainer .featured .featureddiv {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 5px;
+}
+
+#discover #homecontainer .featured div img {
+  width: 100%;
+}
+
+#discover #homecontainer .featured div h3{
+  font-size: 0.8rem;
+}
+
+#discover #homecontainer .featured .featuredcontact {
+  display: flex;
+  justify-content: space-around;
+}
+
+#discover #homecontainer .featured .featuredcontact a {
+  font-size: 0.6rem;
+  margin-top: 10px;
+  padding: 4px 8px;
+  border: 1px solid #3e3a3a;
+  border-radius: 6px;
 }
 
 /* Room Section  */
