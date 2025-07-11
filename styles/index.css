@@ -195,6 +195,7 @@ nav ul li {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 5px;
+  margin-bottom: 20px;
 }
 
 #discover #homecontainer .featured div img {
@@ -202,7 +203,7 @@ nav ul li {
 }
 
 #discover #homecontainer .featured div h3{
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 #discover #homecontainer .featured .featuredcontact {
@@ -213,8 +214,10 @@ nav ul li {
 #discover #homecontainer .featured .featuredcontact a {
   font-size: 0.6rem;
   margin-top: 10px;
-  padding: 4px 8px;
-  border: 1px solid #3e3a3a;
+  padding: 4px 15px;
+  border: 1px solid #8c8c8c2e;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
 }
 
