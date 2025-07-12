@@ -149,11 +149,11 @@ nav ul li {
 
 @keyframes slideLeft {
   from {
-    transform: translateX(30px);
+    transform: translateY(-10px);
     opacity: 0;
   }
   to {
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
