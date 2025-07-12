@@ -97,7 +97,13 @@ function discoverfun() {
   resetRoomFilter();
   resetFoodFilter();
   resetImg();
-  resetfoodImg()
+  resetfoodImg();
+
+  // Scroll top 
+  window.scrollTo({
+      top: 0,
+      // behavior: "smooth"
+    });
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
@@ -119,7 +125,12 @@ function roomfun() {
 
   resetFoodFilter();
   resetImg();
-  resetfoodImg()
+  resetfoodImg();
+
+  // Scroll top 
+  window.scrollTo({
+      top: 0
+    });
 }
 
 document.querySelector("#roomlink").onclick = roomfun;
@@ -142,7 +153,12 @@ function foodfun() {
 
   resetRoomFilter();
   resetImg();
-  resetfoodImg()
+  resetfoodImg();
+
+  // Scroll top 
+  window.scrollTo({
+      top: 0
+    });
 }
 
 document.querySelector("#foodlink").onclick = foodfun;
@@ -169,7 +185,12 @@ function aboutfun() {
   resetRoomFilter();
   resetFoodFilter();
   resetImg();
-  resetfoodImg()
+  resetfoodImg();
+
+  // Scroll top 
+  window.scrollTo({
+      top: 0
+    });
 }
 
 document.querySelector("#aboutlink").onclick = aboutfun;
