@@ -357,12 +357,12 @@ nav ul li {
   object-fit: cover;
 }
 
-#prev {
+.fa-square-caret-left {
   position: absolute;
   left: 5px;
 }
 
-#next {
+.fa-square-caret-right {
   position: absolute;
   right: 5px;
 }

@@ -347,34 +347,32 @@ for (let i = 0; i < roomLocationOptions.length; i++) {
 }
 
 // Room Image Carousel 
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
-let count = 1;
+document.querySelectorAll('#room article').forEach(article => {
+  const imgs = article.querySelectorAll('img[class^="img"]');
+  const prev = article.querySelector('#prev');
+  const next = article.querySelector('#next');
+  let idx = 0;
 
-prev.onclick = prevfun;
-next.onclick = nextfun;
+  const show = () => imgs.forEach((img, i) => img.style.display = i === idx ? 'block' : 'none');
+  show(); // Initial image
 
+  prev?.addEventListener('click', () => {
+    idx = (idx - 1 + imgs.length) % imgs.length;
+    show();
+  });
 
-function nextfun(){
-  document.querySelector(".img"+count).style.display = "none";
-  count++;
-  if(count > 3){count = 1};
-  document.querySelector(".img"+count).style.display = "block";
-}
+  next?.addEventListener('click', () => {
+    idx = (idx + 1) % imgs.length;
+    show();
+  });
+});
 
-function prevfun(){
-  document.querySelector(".img"+count).style.display = "none";
-  count--;
-  if(count < 1){count = 3}
-  document.querySelector(".img"+count).style.display = "block";
-}
-
-function resetImg(){
-  for(let i = 1; i <= 3; i++){
-    document.querySelector(".img"+count).style.display = "none";
-  }
-  document.querySelector(".img1").style.display = "block";
-  count = 1;
+function resetImg() {
+  document.querySelectorAll('#room article').forEach(article => {
+    const imgs = article.querySelectorAll('img[class^="img"]');
+    let idx = 0;
+    imgs.forEach((img, i) => img.style.display = i === 0 ? 'block' : 'none');
+  });
 }
 
 // Reset Room Filter
@@ -461,32 +459,29 @@ function resetFoodFilter() {
 
 // Food Image Carousel 
 
-let prevfood = document.getElementById("prevfood");
-let nextfood = document.getElementById("nextfood");
-let countfood = 1;
+document.querySelectorAll('#food article').forEach(article => {
+  const fimgs = article.querySelectorAll('img[class^="fimg"]');
+  const prevfood = article.querySelector('#prevfood');
+  const nextfood = article.querySelector('#nextfood');
+  let idxfood = 0;
 
-prevfood.onclick = prevfoodfun;
-nextfood.onclick = nextfoodfun;
+  const show = () => fimgs.forEach((fimg, i) => fimg.style.display = i === idxfood ? 'block' : 'none');
+  show(); // Initial image
 
+  prevfood?.addEventListener('click', () => {
+    idxfood = (idxfood - 1 + fimgs.length) % fimgs.length;
+    show();
+  });
 
-function nextfoodfun(){
-  document.querySelector(".fimg"+countfood).style.display = "none";
-  countfood++;
-  if(countfood > 3){countfood = 1};
-  document.querySelector(".fimg"+countfood).style.display = "block";
-}
+  nextfood?.addEventListener('click', () => {
+    idxfood = (idxfood + 1) % fimgs.length;
+    show();
+  });
+});
 
-function prevfoodfun(){
-  document.querySelector(".fimg"+countfood).style.display = "none";
-  countfood--;
-  if(countfood < 1){countfood = 3}
-  document.querySelector(".fimg"+countfood).style.display = "block";
-}
-
-function resetfoodImg(){
-  for(let i = 1; i <= 3; i++){
-    document.querySelector(".fimg"+countfood).style.display = "none";
-  }
-  document.querySelector(".fimg1").style.display = "block";
-  countfood = 1;
-}
+function resetFoodImg() {
+  document.querySelectorAll('#food article').forEach(article => {
+    const fimgs = article.querySelectorAll('fimg[class^="fimg"]');
+    let idxfood = 0;
+    fimgs.forEach((fimg, i) => fimg.style.display = i === 0 ? 'block' : 'none');
+  })};
