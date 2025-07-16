@@ -11,6 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #3e3a3a;
   padding-bottom: 60px;
+  padding-top: 10px;
 }
 
 a {
@@ -70,6 +71,13 @@ nav ul li {
 /* Discover Section  */
 #discover {
   padding-bottom: 30px;
+}
+
+#discover #banner img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 20px;
 }
 
 #discover #homecontainer .categorycontainer {
