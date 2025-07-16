@@ -319,6 +319,11 @@ nav ul li {
   flex-direction: column;
 }
 
+#room article .rooms .roominfo div h2{
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
 #room article .rooms .roomcontact {
   display: flex;
   justify-content: space-around;
@@ -348,17 +353,17 @@ nav ul li {
 
 .rooms .roominfo div img {
   width: 100%;
-}
-
-.rooms .roominfo div i {
-  position: absolute;
+  height: 70%;
+  object-fit: cover;
 }
 
 #prev {
+  position: absolute;
   left: 5px;
 }
 
 #next {
+  position: absolute;
   right: 5px;
 }
 
@@ -571,4 +576,11 @@ nav ul li {
 
 #about article div a {
   font-size: 0.8rem;
+}
+
+
+@media (min-width: 786px){
+  body{
+    display: none;
+  }
 }

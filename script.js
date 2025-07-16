@@ -15,6 +15,7 @@ function category1fun(){
   for(let j = 0; j < roomList.length; j++){
         roomList[j].classList.add("opacityani");
       }
+  document.querySelector(".roomlocationbtn span").innerText = "Area";
 }
 
 function category3fun(){
@@ -33,6 +34,7 @@ function category3fun(){
   for(let j = 0; j < roomList.length; j++){
         roomList[j].classList.add("opacityani");
       }
+  document.querySelector(".roomlocationbtn span").innerText = "Area";
 }
 
 function category2fun(){
