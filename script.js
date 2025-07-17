@@ -1,76 +1,76 @@
 // Categories
-function category1fun(){
+function category1fun() {
   roomfun();
   document.querySelector(".roomtypebtn span").innerText = "Partition";
 
   filterRoomType = "partition";
 
-  for(let i = 0; i < roomList.length; i++){
-    if( roomList[i].getAttribute("data-type") === "partition"){
+  for (let i = 0; i < roomList.length; i++) {
+    if (roomList[i].getAttribute("data-type") === "partition") {
       roomList[i].style.display = "flex";
-    }else{
+    } else {
       roomList[i].style.display = "none";
     }
   }
-  for(let j = 0; j < roomList.length; j++){
-        roomList[j].classList.add("opacityani");
-      }
+  for (let j = 0; j < roomList.length; j++) {
+    roomList[j].classList.add("opacityani");
+  }
   document.querySelector(".roomlocationbtn span").innerText = "Area";
 }
 
-function category3fun(){
+function category3fun() {
   roomfun();
   document.querySelector(".roomtypebtn span").innerText = "Single Room";
 
   filterRoomType = "single";
 
-  for(let i = 0; i < roomList.length; i++){
-    if( roomList[i].getAttribute("data-type") === "single"){
+  for (let i = 0; i < roomList.length; i++) {
+    if (roomList[i].getAttribute("data-type") === "single") {
       roomList[i].style.display = "flex";
-    }else{
+    } else {
       roomList[i].style.display = "none";
     }
   }
-  for(let j = 0; j < roomList.length; j++){
-        roomList[j].classList.add("opacityani");
-      }
+  for (let j = 0; j < roomList.length; j++) {
+    roomList[j].classList.add("opacityani");
+  }
   document.querySelector(".roomlocationbtn span").innerText = "Area";
 }
 
-function category2fun(){
+function category2fun() {
   foodfun();
   document.querySelector(".foodtypebtn span").innerText = "Monthly Meal";
 
   filterFoodType = "monthmeal";
 
-  for(let i = 0; i < foodList.length; i++){
-    if( foodList[i].getAttribute("data-type") === "monthmeal"){
+  for (let i = 0; i < foodList.length; i++) {
+    if (foodList[i].getAttribute("data-type") === "monthmeal") {
       foodList[i].style.display = "flex";
-    }else{
+    } else {
       foodList[i].style.display = "none";
     }
   }
-  for(let j = 0; j < foodList.length; j++){
-        foodList[j].classList.add("opacityani");
-      }
+  for (let j = 0; j < foodList.length; j++) {
+    foodList[j].classList.add("opacityani");
+  }
 }
 
-function category4fun(){
+function category4fun() {
   foodfun();
   document.querySelector(".foodtypebtn span").innerText = "Daily Curry";
 
   filterFoodType = "curry";
 
-  for(let i = 0; i < foodList.length; i++){
-    if( foodList[i].getAttribute("data-type") === "curry"){
+  for (let i = 0; i < foodList.length; i++) {
+    if (foodList[i].getAttribute("data-type") === "curry") {
       foodList[i].style.display = "flex";
-    }else{
+    } else {
       foodList[i].style.display = "none";
     }
   }
-  for(let j = 0; j < foodList.length; j++){
-        foodList[j].classList.add("opacityani");
-      }
+  for (let j = 0; j < foodList.length; j++) {
+    foodList[j].classList.add("opacityani");
+  }
 }
 
 document.querySelector(".category1").onclick = category1fun;
@@ -78,7 +78,7 @@ document.querySelector(".category3").onclick = category3fun;
 document.querySelector(".category2").onclick = category2fun;
 document.querySelector(".category4").onclick = category4fun;
 
-// Tabs 
+// Tabs
 function discoverfun() {
   document.querySelector("#discover").style.display = "block";
   document.querySelector("#room").style.display = "none";
@@ -101,11 +101,11 @@ function discoverfun() {
   resetImg();
   resetFoodImg();
 
-  // Scroll top 
+  // Scroll top
   window.scrollTo({
-      top: 0,
-      // behavior: "smooth"
-    });
+    top: 0,
+    // behavior: "smooth"
+  });
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
@@ -123,16 +123,16 @@ function roomfun() {
   document.querySelector(".foodtypelist").style.display = "none";
   document.querySelector(".foodlocationlist").style.display = "none";
 
-   document.querySelector("#room").classList.add("opacityani");
+  document.querySelector("#room").classList.add("opacityani");
 
   resetFoodFilter();
   resetImg();
   resetFoodImg();
 
-  // Scroll top 
+  // Scroll top
   window.scrollTo({
-      top: 0
-    });
+    top: 0,
+  });
 }
 
 document.querySelector("#roomlink").onclick = roomfun;
@@ -157,10 +157,10 @@ function foodfun() {
   resetImg();
   resetFoodImg();
 
-  // Scroll top 
+  // Scroll top
   window.scrollTo({
-      top: 0
-    });
+    top: 0,
+  });
 }
 
 document.querySelector("#foodlink").onclick = foodfun;
@@ -189,10 +189,10 @@ function aboutfun() {
   resetImg();
   resetFoodImg();
 
-  // Scroll top 
+  // Scroll top
   window.scrollTo({
-      top: 0
-    });
+    top: 0,
+  });
 }
 
 document.querySelector("#aboutlink").onclick = aboutfun;
@@ -275,6 +275,8 @@ let filterRoomDuration = "";
 let filterRoomLocation = "";
 
 function roomFilter() {
+  let found = 0;
+
   for (let i = 0; i < roomList.length; i++) {
     let roomType = roomList[i].getAttribute("data-type");
     let roomDuration = roomList[i].getAttribute("data-duration");
@@ -286,12 +288,18 @@ function roomFilter() {
     let matchLocation =
       filterRoomLocation === "" || filterRoomLocation === roomLocation;
 
-    roomList[i].style.display =
-      matchType && matchDuration && matchLocation ? "flex" : "none";
+    let isMatch = matchType && matchDuration && matchLocation;
+
+    roomList[i].style.display = isMatch ? "flex" : "none";
+
+    if (isMatch) found++;
   }
-  for(let j = 0; j < roomList.length; j++){
-        roomList[j].classList.add("opacityani");
-      }
+
+  document.getElementById("noResultMessageRoom").style.display = (found === 0) ? "block" : "none";
+
+  for (let j = 0; j < roomList.length; j++) {
+    roomList[j].classList.add("opacityani");
+  }
 }
 
 // Filter Room Type
@@ -299,7 +307,6 @@ let roomTypeOptions = document.getElementsByClassName("roomtypeoption");
 
 for (let i = 0; i < roomTypeOptions.length; i++) {
   roomTypeOptions[i].onclick = function () {
-    
     filterRoomType = this.getAttribute("data-filter");
     if (filterRoomType === "") {
       document.querySelector(".roomtypebtn span").innerText = "Room Type";
@@ -346,32 +353,35 @@ for (let i = 0; i < roomLocationOptions.length; i++) {
   };
 }
 
-// Room Image Carousel 
-document.querySelectorAll('#room article').forEach(article => {
+// Room Image Carousel
+document.querySelectorAll("#room article").forEach((article) => {
   const imgs = article.querySelectorAll('img[class^="img"]');
-  const prev = article.querySelector('#prev');
-  const next = article.querySelector('#next');
+  const prev = article.querySelector("#prev");
+  const next = article.querySelector("#next");
   let idx = 0;
 
-  const show = () => imgs.forEach((img, i) => img.style.display = i === idx ? 'block' : 'none');
+  const show = () =>
+    imgs.forEach(
+      (img, i) => (img.style.display = i === idx ? "block" : "none")
+    );
   show(); // Initial image
 
-  prev?.addEventListener('click', () => {
+  prev?.addEventListener("click", () => {
     idx = (idx - 1 + imgs.length) % imgs.length;
     show();
   });
 
-  next?.addEventListener('click', () => {
+  next?.addEventListener("click", () => {
     idx = (idx + 1) % imgs.length;
     show();
   });
 });
 
 function resetImg() {
-  document.querySelectorAll('#room article').forEach(article => {
+  document.querySelectorAll("#room article").forEach((article) => {
     const imgs = article.querySelectorAll('img[class^="img"]');
     let idx = 0;
-    imgs.forEach((img, i) => img.style.display = i === 0 ? 'block' : 'none');
+    imgs.forEach((img, i) => (img.style.display = i === 0 ? "block" : "none"));
   });
 }
 
@@ -397,19 +407,28 @@ let filterFoodLocation = "";
 let foodList = document.getElementById("food").getElementsByTagName("article");
 
 function foodFilter() {
+  let foundfood = 0;
+  
   for (let i = 0; i < foodList.length; i++) {
     let foodType = foodList[i].getAttribute("data-type");
     let foodLocation = foodList[i].getAttribute("data-location");
 
     let matchType = filterFoodType === "" || filterFoodType === foodType;
-    let matchLocation = filterFoodLocation === "" || filterFoodLocation === foodLocation;
+    let matchLocation =
+      filterFoodLocation === "" || filterFoodLocation === foodLocation;
 
-    foodList[i].style.display =
-      matchType && matchLocation ? "flex" : "none";
+    let isMatchFood = matchType && matchLocation;
+
+    foodList[i].style.display = isMatchFood ? "flex" : "none";
+
+    if (isMatchFood) foundfood++;
   }
-  for(let j = 0; j < foodList.length; j++){
-        foodList[j].classList.add("opacityani");
-      }
+
+  document.getElementById("noResultMessageFood").style.display = (foundfood === 0) ? "block" : "none";
+
+  for (let j = 0; j < foodList.length; j++) {
+    foodList[j].classList.add("opacityani");
+  }
 }
 
 // Filter Food Type
@@ -437,14 +456,15 @@ for (let i = 0; i < foodLocationOptions.length; i++) {
     if (filterFoodLocation === "") {
       document.querySelector(".foodlocationbtn span").innerText = "Area";
     } else {
-      document.querySelector(".foodlocationbtn span").innerText = this.innerText;
+      document.querySelector(".foodlocationbtn span").innerText =
+        this.innerText;
     }
 
     foodFilter();
   };
 }
 
-// Reset Food Filter 
+// Reset Food Filter
 function resetFoodFilter() {
   filterFoodType = "";
   filterFoodLocation = "";
@@ -457,31 +477,37 @@ function resetFoodFilter() {
   }
 }
 
-// Food Image Carousel 
+// Food Image Carousel
 
-document.querySelectorAll('#food article').forEach(article => {
+document.querySelectorAll("#food article").forEach((article) => {
   const fimgs = article.querySelectorAll('img[class^="fimg"]');
-  const prevfood = article.querySelector('#prevfood');
-  const nextfood = article.querySelector('#nextfood');
+  const prevfood = article.querySelector("#prevfood");
+  const nextfood = article.querySelector("#nextfood");
   let idxfood = 0;
 
-  const show = () => fimgs.forEach((fimg, i) => fimg.style.display = i === idxfood ? 'block' : 'none');
+  const show = () =>
+    fimgs.forEach(
+      (fimg, i) => (fimg.style.display = i === idxfood ? "block" : "none")
+    );
   show(); // Initial image
 
-  prevfood?.addEventListener('click', () => {
+  prevfood?.addEventListener("click", () => {
     idxfood = (idxfood - 1 + fimgs.length) % fimgs.length;
     show();
   });
 
-  nextfood?.addEventListener('click', () => {
+  nextfood?.addEventListener("click", () => {
     idxfood = (idxfood + 1) % fimgs.length;
     show();
   });
 });
 
 function resetFoodImg() {
-  document.querySelectorAll('#food article').forEach(article => {
+  document.querySelectorAll("#food article").forEach((article) => {
     const fimgs = article.querySelectorAll('fimg[class^="fimg"]');
     let idxfood = 0;
-    fimgs.forEach((fimg, i) => fimg.style.display = i === 0 ? 'block' : 'none');
-  })};
+    fimgs.forEach(
+      (fimg, i) => (fimg.style.display = i === 0 ? "block" : "none")
+    );
+  });
+}
