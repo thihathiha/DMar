@@ -73,11 +73,41 @@ nav ul li {
   padding-bottom: 30px;
 }
 
+#discover #banner{
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
 #discover #banner img{
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 100%;
   margin-top: 20px;
+  position: absolute;
+  animation: bannerslide 12s infinite ease-in;
+}
+
+#discover #banner .banner1{
+  z-index: 3;
+}
+
+#discover #banner .banner2{
+  z-index: 2;
+  animation-delay: 4s;
+}
+
+#discover #banner .banner3{
+  z-index: 1;
+  animation-delay: 8s;
+}
+
+@keyframes bannerslide {
+   0%      { opacity: 0; }
+  5%      { opacity: 1; }
+  28%     { opacity: 1; }
+  33.33%  { opacity: 0; }
+  100%    { opacity: 0; }
 }
 
 #discover #homecontainer .categorycontainer {
