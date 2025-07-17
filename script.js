@@ -382,8 +382,8 @@ function resetRoomFilter() {
   filterRoomLocation = "";
 
   document.querySelector(".roomtypebtn span").innerText = "Room Type";
-  document.querySelector(".roomdurationbtn span").innerText = "Duration";
-  document.querySelector(".roomlocationbtn span").innerText = "Location";
+  document.querySelector(".roomdurationbtn span").innerText = "Rental Duration";
+  document.querySelector(".roomlocationbtn span").innerText = "Area";
 
   for (var j = 0; j < roomList.length; j++) {
     roomList[j].style.display = "flex";

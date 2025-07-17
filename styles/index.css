@@ -85,7 +85,7 @@ nav ul li {
   height: 100%;
   margin-top: 20px;
   position: absolute;
-  animation: bannerslide 12s infinite ease-in-out;
+  animation: bannerslide 20s infinite ease-in-out;
 }
 
 #discover #banner .banner1{
@@ -93,21 +93,21 @@ nav ul li {
 }
 
 #discover #banner .banner2{
-  animation-delay: 4s;
+  animation-delay: 6.66s;
   opacity: 0;
 }
 
 #discover #banner .banner3{
-  animation-delay: 8s;
+  animation-delay: 13.33s;
   opacity: 0;
 }
 
 @keyframes bannerslide {
    0%      { opacity: 0; }
-  5%      { opacity: 1; }
-  28%     { opacity: 1; }
-  33.33%  { opacity: 0; }
-  100%    { opacity: 0; }
+   5%      { opacity: 1; }
+   28%     { opacity: 1; }
+   33.33%  { opacity: 0; }
+   100%    { opacity: 0; }
 }
 
 #discover #homecontainer .categorycontainer {
