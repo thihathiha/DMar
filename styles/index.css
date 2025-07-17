@@ -335,8 +335,8 @@ nav ul li {
 #room article .rooms {
   width: 90%;
   height: 100%;
-  box-shadow: 0px 0px 5px 5px #00000009;
-  /* background-color: red; */
+  box-shadow: 0px 0px 5px 5px #00000013;
+  /* background-color: #fffcef; */
 }
 
 #room article .rooms .roominfo {
@@ -455,7 +455,7 @@ nav ul li {
   background-color: #fff;
   list-style-type: none;
   position: absolute;
-  top: 100%;
+  top: 101%;
   left: 0;
 }
 
@@ -495,7 +495,7 @@ nav ul li {
 #food article .foods {
   width: 90%;
   height: 400px;
-  box-shadow: 0px 0px 5px 5px #00000009;
+  box-shadow: 0px 0px 5px 5px #00000013;
   margin-top: 20px;
   /* background-color: red; */
 }
