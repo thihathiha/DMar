@@ -85,21 +85,21 @@ nav ul li {
   height: 100%;
   margin-top: 20px;
   position: absolute;
-  animation: bannerslide 12s infinite ease-in;
+  animation: bannerslide 12s infinite ease-in-out;
 }
 
 #discover #banner .banner1{
-  z-index: 3;
+  z-index: 10;
 }
 
 #discover #banner .banner2{
-  z-index: 2;
   animation-delay: 4s;
+  opacity: 0;
 }
 
 #discover #banner .banner3{
-  z-index: 1;
   animation-delay: 8s;
+  opacity: 0;
 }
 
 @keyframes bannerslide {
