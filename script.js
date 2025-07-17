@@ -99,7 +99,7 @@ function discoverfun() {
   resetRoomFilter();
   resetFoodFilter();
   resetImg();
-  resetfoodImg();
+  resetFoodImg();
 
   // Scroll top 
   window.scrollTo({
@@ -127,7 +127,7 @@ function roomfun() {
 
   resetFoodFilter();
   resetImg();
-  resetfoodImg();
+  resetFoodImg();
 
   // Scroll top 
   window.scrollTo({
@@ -155,7 +155,7 @@ function foodfun() {
 
   resetRoomFilter();
   resetImg();
-  resetfoodImg();
+  resetFoodImg();
 
   // Scroll top 
   window.scrollTo({
@@ -187,7 +187,7 @@ function aboutfun() {
   resetRoomFilter();
   resetFoodFilter();
   resetImg();
-  resetfoodImg();
+  resetFoodImg();
 
   // Scroll top 
   window.scrollTo({
@@ -452,8 +452,8 @@ function resetFoodFilter() {
   document.querySelector(".foodtypebtn span").innerText = "Food Type";
   document.querySelector(".foodlocationbtn span").innerText = "Area";
 
-  for (var j = 0; j < roomList.length; j++) {
-    roomList[j].style.display = "flex";
+  for (var j = 0; j < foodList.length; j++) {
+    foodList[j].style.display = "flex";
   }
 }
 
