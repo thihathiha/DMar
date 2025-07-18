@@ -400,12 +400,12 @@ nav ul li {
   object-fit: cover;
 }
 
-.fa-square-caret-left {
+.fa-chevron-left {
   position: absolute;
   left: 5px;
 }
 
-.fa-square-caret-right {
+.fa-chevron-right {
   position: absolute;
   right: 5px;
 }
@@ -427,6 +427,9 @@ nav ul li {
 }
 .fa-phone-volume {
   /* color: #1d588d; */
+  color: #fff;
+}
+.fa-chevron-left, .fa-chevron-right{
   color: #fff;
 }
 
