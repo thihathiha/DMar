@@ -499,7 +499,7 @@ nav ul li {
 
 #food article .foods {
   width: 90%;
-  height: 370px;
+  height: 400px;
   box-shadow: 0px 0px 5px 5px #00000012;
   margin-top: 20px;
   padding: 5px 10px;
@@ -550,7 +550,7 @@ nav ul li {
 }
 
 #food article .foods .foodcontact {
-  margin-top: 10px;
+  margin-top: 20px;
 
   display: flex;
   justify-content: space-around;
