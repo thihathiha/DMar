@@ -106,6 +106,7 @@ function discoverfun() {
     top: 0,
     // behavior: "smooth"
   });
+
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
@@ -510,7 +511,7 @@ document.querySelectorAll("#food article").forEach((article) => {
 
 function resetFoodImg() {
   document.querySelectorAll("#food article").forEach((article) => {
-    const fimgs = article.querySelectorAll('fimg[class^="fimg"]');
+    const fimgs = article.querySelectorAll('img[class^="fimg"]');
     let idxfood = 0;
     fimgs.forEach(
       (fimg, i) => (fimg.style.display = i === 0 ? "block" : "none")
