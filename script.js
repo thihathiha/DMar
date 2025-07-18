@@ -398,6 +398,9 @@ function resetRoomFilter() {
   for (var j = 0; j < roomList.length; j++) {
     roomList[j].style.display = "flex";
   }
+
+  document.getElementById("noResultMessageFood").style.display = "none";
+  document.getElementById("noResultMessageRoom").style.display = "none";
 }
 
 // Apply Food Filter Function
@@ -475,6 +478,9 @@ function resetFoodFilter() {
   for (var j = 0; j < foodList.length; j++) {
     foodList[j].style.display = "flex";
   }
+
+  document.getElementById("noResultMessageFood").style.display = "none";
+  document.getElementById("noResultMessageRoom").style.display = "none";
 }
 
 // Food Image Carousel
