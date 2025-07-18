@@ -358,12 +358,12 @@ nav ul li {
 }
 
 #room article .rooms .roominfo div h2{
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 #room article .rooms .roominfo div h3{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 4px;
 }
 
@@ -542,10 +542,12 @@ nav ul li {
 }
 
 #food article .foods .foodinfo h2 {
+  font-size: 1.2rem;
   margin: 10px 0 12px 0;
 }
 
 #food article .foods .foodinfo h3 {
+  font-size: 0.8rem;
   margin-bottom: 5px;
 }
 

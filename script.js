@@ -106,7 +106,6 @@ function discoverfun() {
     top: 0,
     // behavior: "smooth"
   });
-
 }
 
 document.querySelector("#discoverlink").onclick = discoverfun;
