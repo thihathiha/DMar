@@ -12,6 +12,7 @@ body {
   color: #3e3a3a;
   padding-bottom: 60px;
   padding-top: 10px;
+  background-color: #00000012;
 }
 
 a {
@@ -570,7 +571,7 @@ nav ul li {
 
 #food article .foods .foodinfo h3 {
   font-size: 0.8rem;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 #food article .foods .foodinfo .fimg1 {
