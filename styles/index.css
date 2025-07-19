@@ -12,7 +12,7 @@ body {
   color: #3e3a3a;
   padding-bottom: 60px;
   padding-top: 10px;
-  background-color: #00000012;
+  background-color: #00000008;
 }
 
 a {
@@ -353,8 +353,9 @@ nav ul li {
 #room article .rooms {
   width: 90%;
   height: 100%;
-  box-shadow: 0px 0px 5px 5px #00000012;
-  /* background-color: #fffcef; */
+  box-shadow: 0px 0px 5px 2px #00000012;
+  background-color: #ffffffc5;
+  border-radius: 5px;
 }
 
 #room article .rooms .roominfo {
@@ -523,10 +524,11 @@ nav ul li {
 #food article .foods {
   width: 90%;
   height: 380px;
-  box-shadow: 0px 0px 5px 5px #00000012;
+  box-shadow: 0px 0px 5px 2px #00000012;
   margin-top: 20px;
   padding: 5px 10px;
-  /* background-color: red; */
+  background-color: #ffffffc5;
+  border-radius: 5px;
 }
 
 #food article .foods .foodinfo div {
